@@ -15,6 +15,7 @@
   --inline-padding-section-mobile: 16px;
   --main-font: "Inter", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .dark-theme {
@@ -171,6 +172,15 @@ a.text-action:hover {
   border-block-end: currentColor 2px solid;
 }
 
+.burger-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+
 /* END: HEADER */
 
 /* HERO */
@@ -223,6 +233,10 @@ a.text-action:hover {
   max-inline-size: 200px;
   height: 64px;
   gap: 8px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .hero-button__icon {
@@ -569,4 +583,15 @@ a.text-action:hover {
 
 .contacts__item:hover {
   border-block-end: var(--text-inverse) 2px solid;
+}
+
+@media (max-width: 768px) {
+  .header__nav,
+  .header__menu-link {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
 }
