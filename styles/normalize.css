@@ -1,0 +1,28 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+} 
+
+h1,
+h2,
+h3,
+h4,
+h6,
+p,
+ul,
+ol,
+li, 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
