@@ -36,7 +36,7 @@
 
 .page-container {
   padding-inline: var(--inline-padding-section-desktop);
-  inline-size: var(--desktop-width);
+  inline-size: min(100%, var(--desktop-width));
   margin: 0 auto;
 }
 
