@@ -1,0 +1,7 @@
+.hero {
+  border-radius: var(--border-radius-s);
+  background: linear-gradient(rgba(0, 0, 0, 0.2)), 
+    url(../resources/img-hero.jpg) no-repeat center/cover;
+  padding-block: 6.25rem;
+  padding-inline: clamp(3.75rem, calc(5.95vw + 0.875rem), 6.25rem);
+}

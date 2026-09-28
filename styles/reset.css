@@ -1,0 +1,36 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, 
+ul,
+ol, 
+li,
+body,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, 
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
