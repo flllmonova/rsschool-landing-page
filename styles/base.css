@@ -1,0 +1,93 @@
+:root {
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.text-accent {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.heading-h1 {
+  font-family: inherit;
+  font-size: clamp(2.6rem, calc(7.7vw + 0.8rem), 4.5rem);
+  font-weight: 600;
+  color: var(--text-inverse);
+  line-height: 1.05em;
+}
+
+.text-description {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-inverse);
+  line-height: 1.5em;
+}
+
+.slider__cart .text-description {
+  color: var(--text-primary);
+}
+
+.burger-link {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25em;
+  border-block: 2px solid transparent;
+}
+
+.heading-h2 {
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.25em;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: clamp(2rem, 7.2vw + 0.29rem, 3.75rem);
+}
+
+.heading-h3 {
+  text-align: center;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  line-height: 1.25em;
+}
+
+.figure {
+  width: 100%;
+}
+
+.text-caption {
+  font-family: inherit;
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1.4em;
+  color: var(--text-primary);
+}

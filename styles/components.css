@@ -1,0 +1,273 @@
+.action-link {
+  text-align: center;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5em;
+  font-size: 1rem;
+  color: var(--text-primary);
+  padding-block: 0.125em;
+  border-block: 0.125em transparent solid;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .action-link:hover,
+  .action-link:focus-visible {
+    border-block-end-color: var(--text-primary);
+    transition: border-block-end 0.5s ease-in-out;
+  }
+}
+
+.theme-switch {
+  padding: var(--padding-xs);
+  border: var(--border-primary) var(--border-width) solid;
+  border-radius: var(--btn-border-radius);
+}
+
+.theme-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: var(--icon-size-s);
+  block-size: var(--icon-size-s);
+  padding: var(--padding-s);
+  border-radius: var(--btn-border-radius);
+}
+
+.theme-button--current {
+  background-color: var(--text-accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-button:not(.theme-button--current):hover {
+    background-color: var(--border-inverse);
+    transition: var(--bg-transition);
+
+    & path {
+      fill: var(--text-inverse);
+      transition: var(--icon-fill-transition);
+    }
+  }
+}
+
+.wrapper__menu-link svg {
+  position: relative;
+  inset-block-end: 0.125rem;
+}
+
+.rounded-button {
+  background-color: var(--bg-page);
+  border: var(--border-width) var(--border-inverse) solid;
+  border-radius: var(--btn-border-radius);
+}
+
+.burger-menu__button {
+  inline-size: var(--btn-rounded-size-s);
+  block-size: var(--btn-rounded-size-s);
+  display: none;
+  flex-direction: column;
+  gap: var(--gap-s);
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu__line {
+  display: block;
+  inline-size: 1rem;
+  block-size: 1.5px;
+  border-radius: var(--btn-border-radius);
+  background-color: var(--text-primary);
+}
+
+.oval-button {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 600;
+  padding: 1.25rem;
+}
+
+.hero__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-s);
+  inline-size: 12.5rem;
+  block-size: 4rem;
+  border: none;
+  border-radius: var(--btn-border-radius);
+}
+
+.hero__button {
+  & span {
+    transform: translateX(0.875rem);
+    transition: transform 0.5s ease;
+  }
+
+  & svg {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero__button:hover {
+    & span {
+      transform: translateX(0);
+    }
+
+    & svg {
+    opacity: 1;
+    transform: translateX(0);
+    }
+  }
+
+
+
+  .slider__control:hover {
+    & svg {
+      fill: var(--bg-container);
+      transition: fill 0.5s ease;
+    }
+    
+    & rect {
+      stroke: var(--bg-container);
+      transition: stroke 0.5s ease;
+    }
+
+    & path {
+      stroke: var(--text-inverse);
+      transition: stroke 0.5s ease;
+    }
+  }
+
+  .slider__dot:hover {
+    background-color: var(--border-inverse);
+    transition: 0.5s background-color ease;
+  }
+
+  .app__action:hover {
+    background-color: var(--bg-container);
+    color: var(--text-inverse);
+    transition: 0.5s color ease, background-color ease 0.5s;
+
+    & .action-link {
+      color: var(--text-inverse);
+      transition: 0.5s color ease;
+    }
+
+    & path {
+      fill: var(--text-inverse);
+      transition: 0.5s fill ease;
+    }
+  }
+
+  .socials__button:hover {
+    background-color: var(--bg-page);
+    border-color: var(--bg-page);
+    transition: 0.5s ease background-color;
+
+    & path {
+      stroke: var(--text-primary);
+      transition: 0.5s ease stroke;
+    }
+  }
+}
+
+.burger-menu__button {
+  user-select: none;
+  position: relative;
+}
+
+.burger-menu__line {
+  transition: transform 0.5s ease;
+}
+
+.burger-menu {
+  position: fixed;
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+  inset: 0;
+  padding-inline: var(--page-inline-padding);
+  padding-block-start: 6.25rem;
+  overflow-y: auto;
+  background-color: var(--bg-page);
+  transform: translateX(200px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease,
+    visibility ease-in-out 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu.opened {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+
+.burger-menu__button.opened {
+  z-index: 2;
+
+  & span {
+    position: relative;
+  }
+
+  & span:first-child {
+    transform: rotateZ(45deg);
+    inset-block-start: 5px;
+  }
+
+  & span:last-child {
+    transform: rotateZ(-45deg);
+    inset-block-start: -5px;
+  }
+}
+
+.app__actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+
+.app__action {
+  display: block;
+  inline-size: 12.5rem;
+  block-size: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap-s);
+  border: var(--border-inverse) 1px solid;
+  border-radius: var(--btn-border-radius);
+  padding-inline: 1.25rem;
+}
+
+.socials__button {
+  inline-size: 3.75rem;
+  block-size: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-primary);  
+  border-radius: 6.25rem;
+}
+
+.footer__right-side .heading-h3 {
+  color: var(--text-inverse);
+  text-align: start;
+}
+
+.footer__right-side .action-link {
+  color: var(--text-inverse);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.footer__right-side li + li {
+  margin-block-start: 1rem;
+}

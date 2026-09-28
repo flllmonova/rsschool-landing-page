@@ -1,0 +1,20 @@
+:root {
+  --btn-border-radius: 6.25rem;
+
+  --padding-s: 0.5rem;
+  --padding-xs: 0.2rem;
+  
+  --gap-s: 0.5rem;
+
+  --icon-size-s: 2.25rem;
+
+  --icon-fill-transition: 0.3s fill ease;
+  --bg-transition: 0.5s background-color ease;
+  --appear-transition: 0.5s display ease;
+
+  --btn-rounded-size-s: 2.75rem;
+
+  --border-width: 0.125rem;
+
+  --border-radius-s: 2.5rem;
+}
