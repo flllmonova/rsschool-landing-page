@@ -28,7 +28,6 @@ function closeMenu() {
   burgerMenuBtn.classList.remove('opened');
   burgerMenuBtn.setAttribute('aria-expanded', 'false');
   document.documentElement.style.removeProperty('overflow-y');
-  // document.body.style.removeProperty('overflow-y');
   isOpened = false;
 }
 
