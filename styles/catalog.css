@@ -1,0 +1,116 @@
+.header__menu-link,
+.burger-menu-link {
+  border-block-end-color: var(--text-primary);
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.catalog__title {
+  max-inline-size: 50rem;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tab {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  padding-inline-end: 1rem;
+  background-color: var(--bg-page);
+  border: var(--border-primary) 1px solid;
+  color: var(--text-primary);
+  border-radius: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.tab--selected {
+  background-color: var(--bg-container);
+  color: var(--text-inverse);
+  border-color: var(--bg-container);
+
+  & .tab__img {
+    background-color: var(--bg-page);
+  }
+}
+
+.tab__img {
+  background-color: var(--border-primary);
+  border-radius: 6.25rem;
+  object-fit: contain;
+}
+
+.tab-text {
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: inherit;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tab:hover {
+    background-color: var(--bg-container);
+    color: var(--text-inverse);
+    border-color: var(--bg-container);
+    transition: color 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+
+  & .tab__img {
+    background-color: var(--bg-page);
+    transition: background-color 0.5s ease;
+  }
+}
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 310px));
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.card {
+  border-radius: 2.5rem;
+  border: 1px solid var(--border-primary);
+}
+
+.card__img-wrapper {
+  border: transparent 0.5px solid;
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 19.375rem;
+  max-height: 19.375rem;
+}
+
+.card__img {
+  border-radius: 2.5rem;
+}
+
+.card__text {
+  width: 100%;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.card__description {
+  color: var(--text-primary);
+}

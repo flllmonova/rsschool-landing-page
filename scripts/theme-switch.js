@@ -21,6 +21,7 @@ function setDarkTheme() {
   themeButtonDark.classList.add('theme-button--current');
   localStorage.setItem('theme', 'dark');
 }
+
 function setSelectedTheme() {
   const selectedTheme = localStorage.getItem('theme') || 'light';
   (selectedTheme === 'light') ? setLightTheme() : setDarkTheme();
