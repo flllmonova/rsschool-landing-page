@@ -136,22 +136,22 @@
           Behind each of our cups hides an <span class="text-accent">amazing surprise</span>
         </h1>
         <div class="tabs">
-          <button class="tab tab--selected">
+          <button class="tab tab--selected" data-category="coffee" type="button">
             <img class="tab__img" src="../resources/catalog-tabs/coffee.png" alt="coffee icon" width="30" height="30">
             <span class="tab-text">Coffee</span>
           </button>
-          <button class="tab">
+          <button class="tab" data-category="tea" type="button">
             <img class="tab__img" src="../resources/catalog-tabs/tea.png" alt="tee icon" width="30" height="30">
             <span class="tab-text">Tea</span>
           </button>
-          <button class="tab">
+          <button class="tab" data-category="dessert" type="button">
             <img class="tab__img" src="../resources/catalog-tabs/dessert.png" alt="dessert icon" width="30" height="30">
             <span class="tab-text">Dessert</span>
           </button>
         </div>
 
-        <div class="cards">
-          <article class="card">
+        <div class="cards" id="cards">
+          <!-- <article class="card">
             <figure  class="card__img-wrapper">
               <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img" width="310" height="310">
             </figure>
@@ -160,73 +160,7 @@
               <p class="card__description text-description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
               <p class="card__price heading-h3">$7.00</p>
             </div>
-          </article>
-
-          <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price">$7.00</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price">$7.00</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price">$7.00</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price">$7.00</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price">$7.00</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price">$7.00</p>
-            </div>
-          </article>
+          </article> -->
         </div>
       </section>
     </main>
@@ -299,6 +233,6 @@
   </div>
   <script src="../scripts/theme-switch.js"></script>
   <script src="../scripts/burger-menu.js"></script>
-  <script src="../scripts/slider.js"></script>
+  <script type="module" src="../scripts/cards.js"></script>
 </body>
 </html>

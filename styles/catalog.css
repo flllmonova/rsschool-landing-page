@@ -69,11 +69,17 @@
     border-color: var(--bg-container);
     transition: color 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
 
-  & .tab__img {
-    background-color: var(--bg-page);
-    transition: background-color 0.5s ease;
+    & .tab__img {
+      background-color: var(--bg-page);
+      transition: background-color 0.5s ease;
+    }
   }
-}
+
+  .card:hover {
+    .card__img {
+      transform: scale(110%);
+    }
+  }
 }
 
 .cards {
@@ -81,10 +87,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 310px));
   justify-content: center;
+  align-items: stretch;
   gap: 2.5rem;
 }
 
 .card {
+  cursor: pointer;
   border-radius: 2.5rem;
   border: 1px solid var(--border-primary);
 }
@@ -95,10 +103,13 @@
   aspect-ratio: 1/1;
   max-width: 19.375rem;
   max-height: 19.375rem;
+  border-radius: 2.5rem;
+  overflow: hidden;
 }
 
 .card__img {
-  border-radius: 2.5rem;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card__text {
@@ -113,4 +124,5 @@
 
 .card__description {
   color: var(--text-primary);
+  text-align: start;
 }
