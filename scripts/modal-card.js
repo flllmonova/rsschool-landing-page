@@ -95,4 +95,6 @@ function closeModal() {
 modal.addEventListener('click', (event) => {
   if (event.target.closest('.modal-overlay')) closeModal();
   if (event.target.closest('.modal-card__button-close')) closeModal();
-}) 
+})
+
+document.addEventListener('keydown', () => closeModal());
