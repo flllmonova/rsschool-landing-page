@@ -61,6 +61,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .modal-card__img-wrapper {
+    display: none;
+  }
+}
+
 @media (max-width: 500px) {
   .app__actions {
     flex-direction: column;

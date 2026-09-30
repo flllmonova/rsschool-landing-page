@@ -91,3 +91,9 @@ button {
   line-height: 1.4em;
   color: var(--text-primary);
 }
+
+.no-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100vw;
+}

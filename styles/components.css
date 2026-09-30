@@ -12,7 +12,7 @@
 @media (hover: hover) and (pointer: fine) {
   .action-link:hover,
   .action-link:focus-visible {
-    border-block-end-color: var(--text-primary);
+    border-block-end-color: inherit;
     transition: border-block-end 0.5s ease-in-out;
   }
 

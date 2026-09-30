@@ -151,20 +151,9 @@
         </div>
 
         <div class="cards" id="cards">
-          <!-- <article class="card">
-            <figure  class="card__img-wrapper">
-              <img src="../resources/catalog/coffee-1.jpg" alt="coffee" class="card__img" width="310" height="310">
-            </figure>
-            <div class="card__text">
-              <h3 class="headeing-h3">Irish coffee</h3>
-              <p class="card__description text-description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              <p class="card__price heading-h3">$7.00</p>
-            </div>
-          </article> -->
         </div>
       </section>
     </main>
-
     <footer class="footer" id="contact">
       <div class="footer__left-side">
         <h2 class="heading-h2 contacts__title">
@@ -234,5 +223,80 @@
   <script src="../scripts/theme-switch.js"></script>
   <script src="../scripts/burger-menu.js"></script>
   <script type="module" src="../scripts/cards.js"></script>
+  <script type="module" src="../scripts/modal-card.js"></script>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <article class="modal-card">
+      <figure class="modal-card__img-wrapper">
+        <img class="modal-card__img" width="310" height="310" src="" alt="">
+      </figure>
+
+      <div class="modal-card__text">
+        <h2 class="heading-h2 modal-card__title"></h2>
+
+        <p class="modal-card__description"></p>
+        
+        <div class="modal-card__size">
+          <h4 class="size__title modal-card__subtitle">Size</h4>
+          <div class="modal-option__wrapper">
+            <button data-option="sizes" data-key="S" class="modal-option__button modal-option-size__button modal-option__button--selected" type="button">
+              <span>S</span>
+              <span data-key="S" data-option="sizes"></span>
+            </button>
+            <button data-option="sizes" data-key="M" class="modal-option__button modal-option-size__button" type="button">
+              <span>M</span>
+              <span data-key="M" data-option="sizes"></span>
+            </button>
+            <button data-option="sizes" data-key="L" class="modal-option__button modal-option-size__button" type="button">
+              <span>L</span>
+              <span data-key="L" data-option="sizes"></span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="modal-card__additives">
+          <h4 class="additives__title modal-card__subtitle">Additives</h4>
+          <div class="modal-option__wrapper">
+            <button data-key="1" data-option="additives" class="modal-option__button modal-option-additives__button" type="button">
+              <span>1</span>
+              <span data-key="1" data-option="additives"></span>
+            </button>
+            <button data-key="2" data-option="additives" class="modal-option__button modal-option-additives__button" type="button">
+              <span>2</span>
+              <span data-key="2" data-option="additives"></span>
+            </button>
+            <button data-key="3" data-option="additives" class="modal-option__button modal-option-additives__button" type="button">
+              <span>3</span>
+              <span data-key="3" data-option="additives"></span>
+            </button>
+          </div>
+        </div>  
+          
+          <p class="modal-card__total heading-h3">
+            <span>Total:</span>
+            <span class="modal-card__price"></span>
+          </p>
+
+          <div class="modal-card__alert">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_147811_7961)">
+              <path d="M8 7.66663V11" stroke="var(--text-primary)" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 5.00667L8.00667 4.99926" stroke="var(--text-primary)" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" stroke="var(--text-primary)" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_147811_7961">
+              <rect width="16" height="16" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            <p class="modal-card__caption">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+          </div>
+
+        <button type="button" class="modal-card__button-close">Close</button>
+      </div>
+    </article>
+  </div>
 </body>
 </html>

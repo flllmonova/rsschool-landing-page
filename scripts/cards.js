@@ -2,8 +2,15 @@
 
 import { cardsData } from './card-data.js';
 
+const priceFormatter = Intl.NumberFormat('en-US', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
 const cardContainer = document.getElementById('cards');
 const tabs = document.querySelectorAll('.tab');
+const cardPopupTemplate = document.getElementById("template");
+
 let currentCategory = 'coffee';
 
 updateCatalog()
@@ -43,7 +50,7 @@ function makeCard(cardData) {
 
   const cardTitle = document.createElement('h3');
   cardTitle.classList.add('heading-h3');
-  cardTitle.textContent = cardData["name"];
+  cardTitle.textContent = cardData["title"];
 
   const cardDescription = document.createElement('p');
   cardDescription.classList.add('card__description', 'text-description');
@@ -51,20 +58,18 @@ function makeCard(cardData) {
 
   const cardPrice = document.createElement('p');
   cardPrice.classList.add('card__price', 'heading-h3');
-  cardPrice.textContent = cardData['price'];
+  cardPrice.textContent = `$${priceFormatter.format(cardData['priceInDollars'])}`;
 
   cardTextContent.append(cardTitle, cardDescription, cardPrice);
 
   card.appendChild(cardTextContent);
-
+   
   return card;   
 }
 
 tabs.forEach(tab => {
   tab.addEventListener('click', (e) => {
     const selectedCategory = e.currentTarget.dataset.category;
-
-    console.log(selectedCategory);
 
     if (currentCategory !== selectedCategory) {
       currentCategory = selectedCategory;
@@ -79,3 +84,4 @@ function clearCatalog() {
     cardContainer.removeChild(cardContainer.firstChild);
   }
 }
+
