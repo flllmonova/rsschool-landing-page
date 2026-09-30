@@ -38,8 +38,15 @@ function openModal(cardId) {
   price.textContent = `$${priceFormatter.format(cardData['priceInDollars'])}`;
   
   const optionButtons = modal.querySelectorAll('.modal-option__button', );
+
   
   optionButtons.forEach((button) => {
+    
+    button.classList.remove('modal-option__button--selected');
+    if (button.dataset.key === 'S' && button.dataset.option === "sizes") {
+      button.classList.add('modal-option__button--selected');
+    }
+
     button.addEventListener('click', function() {
       
       const option = this.dataset.option;
