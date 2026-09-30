@@ -179,6 +179,7 @@
 }
 
 .modal-card {
+  border: var(--border-primary) 2px solid;
   z-index: 100;
   max-width: 50rem;
   display: flex;
@@ -217,6 +218,7 @@
 .modal-card__title,
 .modal-card__description {
   text-align: left;
+  color: var(--text-primary);
 }
 
 .modal-card__subtitle,
@@ -267,6 +269,7 @@
 .modal-option__button--selected {
   color: var(--text-inverse);
   background-color: var(--bg-container);
+  border-color: var(--bg-container);
 
   & span:first-child {
     background-color: var(--bg-page);
