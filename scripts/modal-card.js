@@ -77,10 +77,12 @@ function openModal(cardId) {
   }
 
   modal.setAttribute('aria-hidden', false);
+  document.documentElement.classList.add('no-scroll');
 }
 
 function closeModal() {
   modal.setAttribute('aria-hidden', true);
+  document.documentElement.classList.remove('no-scroll');
 }
 
 modal.addEventListener('click', (event) => {
