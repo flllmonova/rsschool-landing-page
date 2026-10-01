@@ -174,7 +174,8 @@
     color: var(--text-inverse);
     transition: 0.5s color ease, background-color ease 0.5s;
 
-    & .action-link {
+    & .action-link,
+    & .text-caption {
       color: var(--text-inverse);
       transition: 0.5s color ease;
     }
@@ -195,6 +196,8 @@
       transition: 0.5s ease stroke;
     }
   }
+
+
 }
 
 .burger-menu__button {
