@@ -27,6 +27,12 @@
       }
     }
   }
+
+  .footer__right-side {
+    & .action-link:hover {
+      border-block-end-color: var(--text-inverse);
+    }
+  }
 }
 
 .theme-switch {

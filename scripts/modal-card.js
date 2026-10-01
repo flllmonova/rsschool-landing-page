@@ -10,8 +10,6 @@ const priceFormatter = Intl.NumberFormat('en-US', {
   maximumFractionDigits: 2,
 });
 
-// console.log('card');
-
 cardContainer.addEventListener('click', (event) => {
   const card = event.target.closest('.card');
 
