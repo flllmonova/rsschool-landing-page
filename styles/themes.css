@@ -9,7 +9,9 @@
   
   --border-primary: #C1B6AD;
   --border-inverse: #665F55;
+}
 
+body {
   background-color: var(--bg-page);
 }
 

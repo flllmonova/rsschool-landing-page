@@ -17,6 +17,7 @@ function showMenu() {
   burgerMenu.classList.add('opened');
   burgerMenuBtn.classList.add('opened');
   burgerMenuBtn.setAttribute('aria-expanded', 'true');
+  document.documentElement.style.overflowY = 'hidden';
   document.body.style.overflowY = 'hidden';
   isOpened = true;
 }
@@ -26,7 +27,7 @@ function closeMenu() {
   burgerMenu.classList.remove('opened');
   burgerMenuBtn.classList.remove('opened');
   burgerMenuBtn.setAttribute('aria-expanded', 'false');
-  document.body.style.overflowY = 'auto';
+  document.documentElement.style.removeProperty('overflow-y');
   isOpened = false;
 }
 
