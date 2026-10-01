@@ -59,6 +59,11 @@
     padding-inline: clamp(1rem, 11.34vw - 1.69rem, 3.75rem);
     flex-direction: column;
   }
+
+  .show-cards-button {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 600px) {

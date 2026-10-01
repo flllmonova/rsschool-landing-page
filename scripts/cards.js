@@ -9,13 +9,14 @@ const priceFormatter = Intl.NumberFormat('en-US', {
 
 const cardContainer = document.getElementById('cards');
 const tabs = document.querySelectorAll('.tab');
-const cardPopupTemplate = document.getElementById("template");
+const showCardsButton = document.querySelector('.show-cards-button');
 
 let currentCategory = 'coffee';
 
 updateCatalog()
 
 function updateCatalog() {
+
   cardsData
     .filter(({ category }) => category === currentCategory) 
     .forEach(cardData => {
@@ -24,6 +25,10 @@ function updateCatalog() {
     })
 
   tabs.forEach(tab => tab.classList.toggle('tab--selected', tab.dataset.category === currentCategory))
+
+  const cards = cardContainer.querySelectorAll('.card');
+
+  hideCards(cards);
 }
 
 function makeCard(cardData) {
@@ -75,6 +80,7 @@ tabs.forEach(tab => {
       currentCategory = selectedCategory;
       clearCatalog();
       updateCatalog();
+      hideCards(cardContainer.querySelectorAll('.card'));
     }
   })
 })
@@ -85,3 +91,38 @@ function clearCatalog() {
   }
 }
 
+function hideCards(cards) {
+  const initialCardNumber = 4;
+  
+  if (cards.length > initialCardNumber) {
+    showButton();
+    cards.forEach((card, index) => {
+      if (index > (initialCardNumber - 1)) hideCard(card);
+    })
+  } else {
+    hideButton();
+  }
+}
+
+function showCard(card) {
+  card.style.display = "block";
+}
+
+function hideCard(card) {
+  card.style.display = "none";
+}
+
+function showButton() {
+  showCardsButton.style.display = "block";
+}
+
+function hideButton() {
+  showCardsButton.style.display = "none";
+}
+
+showCardsButton.addEventListener('click', () => {
+  const cards = cardContainer.querySelectorAll('.card');
+
+  cards.forEach(card => showCard(card));
+    hideButton();
+});
